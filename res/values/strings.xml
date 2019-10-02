@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">ActusPlus</string>
+
+    <string name="action_share">Partager</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="action_favoris">Favoris</string>
+    <string name="show_pwd">Montrer</string>
+    <string name="remember_me">Souviens de moi</string>
+    <string name="error_message">Échec de l\'obtention de résultats, réessayez!</string>
+
+
+    <!--Used by Preferences  -->
+    <!-- number of load -->
+    <string name="pref_load_label">nombre d\'actus </string>
+
+    <string name="pref_load_key" translatable="false">load</string>
+
+    <string name="pref_load_default" translatable="false">10</string>
+
+    <!-- name -->
+    <string name="pref_name_label">Prénom</string>
+
+    <string name="pref_name_key" translatable="false">name</string>
+
+    <string name="pref_name_default" translatable="false"></string>
+
+    <!-- family name -->
+    <string name="pref_family_name_label">Nom de famille</string>
+
+    <string name="pref_family_name_key" translatable="false">family name</string>
+
+    <string name="pref_family_name_default" translatable="false"></string>
+
+    <!-- mail adress -->
+    <string name="pref_mail_label">Email</string>
+
+    <string name="pref_mail_key" translatable="false">mail</string>
+
+    <string name="pref_mail_default" translatable="false"></string>
+
+    <!-- password -->
+    <string name="pref_password_label">Mot de passe</string>
+
+    <string name="pref_password_key" translatable="false">password</string>
+
+    <string name="pref_password_default" translatable="false"></string>
+
+
+    <!-- gender -->
+    <string name="pref_gender_label">Genre</string>
+
+    <string name="pref_gender_key" translatable="false">gender</string>
+    <!-- male -->
+    <string name="pref_male_label">Mâle</string>
+
+    <string name="pref_male_value" translatable="false">Mâle</string>
+
+    <!-- male -->
+    <string name="pref_female_label">Femelle</string>
+
+    <string name="pref_female_value" translatable="false">Femelle</string>
+
+    <!-- Label for the  checkbox preference -->
+    <string name="pref_remember_me_label">Souviens de moi</string>
+    <!-- Key name for storing remember me in SharedPreferences -->
+    <string name="pref_remember_me_key" translatable="false">remember_me</string>
+
+    <string name="pref_remember_me_true">Oui</string>
+    <string name="pref_remember_me_false">Non</string>
+
+</resources>

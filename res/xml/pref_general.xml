@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditTextPreference
+        android:defaultValue="@string/pref_load_default"
+        android:inputType="text"
+        android:key="@string/pref_load_key"
+        android:singleLine="true"
+        android:title="@string/pref_load_label" />
+    <CheckBoxPreference
+        android:defaultValue="@bool/pref_remember_me_default"
+        android:key="@string/pref_remember_me_key"
+        android:summaryOff="@string/pref_remember_me_false"
+        android:summaryOn="@string/pref_remember_me_true"
+        android:title="@string/pref_remember_me_label"/>
+    <EditTextPreference
+        android:defaultValue="@string/pref_name_default"
+        android:inputType="text"
+        android:key="@string/pref_name_key"
+        android:singleLine="true"
+        android:title="@string/pref_name_label" />
+    <EditTextPreference
+        android:defaultValue="@string/pref_family_name_default"
+        android:inputType="text"
+        android:key="@string/pref_family_name_key"
+        android:singleLine="true"
+        android:title="@string/pref_family_name_label" />
+    <ListPreference
+        android:defaultValue="@string/pref_male_value"
+        android:entries="@array/pref_gender_options"
+        android:entryValues="@array/pref_gender_values"
+        android:key="@string/pref_gender_key"
+        android:title="@string/pref_gender_label" />
+    <EditTextPreference
+        android:defaultValue="@string/pref_mail_default"
+        android:inputType="text"
+        android:key="@string/pref_mail_key"
+        android:singleLine="true"
+        android:title="@string/pref_mail_label" />
+    <EditTextPreference
+        android:defaultValue="@string/pref_password_default"
+        android:inputType="text"
+        android:key="@string/pref_password_key"
+        android:singleLine="true"
+        android:title="@string/pref_password_label" />
+
+
+</PreferenceScreen>

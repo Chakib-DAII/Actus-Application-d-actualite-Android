@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sv_log_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:fitsSystemWindows="true"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/ll_log_in"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle"
+            android:backgroundTint="@color/white"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <!-- Email Label -->
+
+            <EditText android:id="@+id/ev_input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <!-- Password Label -->
+                <EditText android:id="@+id/ev_input_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:inputType="textPassword"
+                    android:hint="Mot de passe"
+                    android:layout_weight="0.64" />
+
+                <CheckBox
+                    android:id="@+id/cbShowPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/show_pwd" />
+
+            </LinearLayout>
+            <CheckBox
+                android:id="@+id/cb_remember_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/remember_me"
+                android:checked="true"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:onClick="login"
+                android:text="S'identifier"/>
+
+            <TextView android:id="@+id/tv_link_signup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="vous n'avez pas de compte? Créer un"
+                android:gravity="center"
+                android:onClick="changeToSignin"
+                android:textSize="16dip"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+        </ScrollView>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sv_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/ll_sign_in"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle"
+            android:backgroundTint="@color/white"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginTop="10dp">
+
+                <!-- Name Label -->
+
+                <EditText android:id="@+id/ev_name"
+                    android:layout_width="132dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Prénom"
+                    android:textSize="15sp"/>
+
+                <!-- Family Name Label -->
+                <EditText
+                    android:id="@+id/ev_family_name"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nom de famille"
+                    android:textSize="15sp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_gender"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genre : "
+                    android:textSize="15sp"
+                    android:layout_weight="0.29" />
+
+                <CheckBox
+                    android:id="@+id/cb_gender_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pref_male_value"
+                    android:textSize="15sp"
+                    android:checked="true"
+                    android:onClick="onCheckboxClicked"
+                    android:layout_weight="0.33" />
+
+                <CheckBox
+                    android:id="@+id/cb_gender_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/pref_female_value"
+                    android:onClick="onCheckboxClicked"
+                    android:layout_weight="0.27" />
+
+            </LinearLayout>
+
+
+            <!-- Email Label -->
+
+            <EditText android:id="@+id/ev_input_email_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:inputType="textEmailAddress"
+                android:hint="Email" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <!-- Password Label -->
+                <EditText android:id="@+id/ev_input_password_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:inputType="textPassword"
+                    android:hint="Mot de passe"
+                    android:layout_weight="0.64" />
+
+                <CheckBox
+                    android:id="@+id/cbShowPwd_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/show_pwd" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_verifypass"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <!-- Verify Password Label -->
+                <EditText android:id="@+id/ev_verify_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:inputType="textPassword"
+                    android:hint="Mot de passe"
+                    android:layout_weight="0.64" />
+                <CheckBox
+                    android:id="@+id/cbShowPwdverify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_pwd"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_sign"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:onClick="signup"
+                android:text="Créer"/>
+
+            <TextView android:id="@+id/tv_link_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Vous avez un compte? S'identifier"
+                android:gravity="center"
+                android:onClick="changeToLogin"
+                android:textSize="16dip"
+                android:layout_marginBottom="40dp"/>
+
+        </LinearLayout>
+
+        </ScrollView>
+</FrameLayout>
